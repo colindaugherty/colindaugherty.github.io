@@ -6,3 +6,4 @@
   [alert show];
   [alert release];
 }
+%end
