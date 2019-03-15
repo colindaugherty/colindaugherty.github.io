@@ -1,0 +1,9 @@
+Package: net.colindaugherty.testinginstall
+Name: TestingInstall
+Depends: mobilesubstrate
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: An awesome MobileSubstrate tweak!
+Maintainer: Colin Daugherty <support@colindaugherty.net>
+Author: Colin Daugherty <support@colindaugherty.net>
+Section: Tweaks
