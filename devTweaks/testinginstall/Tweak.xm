@@ -13,4 +13,5 @@
   [self presentViewController:alertController animated:YES completion:nil];
 
   %orig; // call normal function so SpringBoard loads.
+}
 %end
