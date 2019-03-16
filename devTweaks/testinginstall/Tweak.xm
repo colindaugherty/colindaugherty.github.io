@@ -1,6 +1,8 @@
 
 %hook SBLockScreenViewController
--(void)viewDidAppear {
+-(void)viewDidLoad {
+  %orig; // call normal function so SpringBoard loads.
+
   UIAlertController *alertController = [UIAlertController  alertControllerWithTitle:@"b1ackzi0n"  message:@"Tweak installed successfully"  preferredStyle:UIAlertControllerStyleAlert];
 
   [alertController addAction:[
@@ -12,6 +14,5 @@
 
   [self presentViewController:alertController animated:YES completion:nil];
 
-  %orig; // call normal function so SpringBoard loads.
 }
 %end
