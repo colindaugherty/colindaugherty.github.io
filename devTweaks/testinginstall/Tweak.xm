@@ -1,5 +1,10 @@
+#import <SpringBoard/SpringBoard.h>
 
-%hook SBLockScreenViewController
+@interface SpringBoard : SBLockScreenViewControllerBase
+@end
+
+
+%hook SBLockScreenViewControllerBase
 -(void)viewDidLoad {
   %orig; // call normal function so SpringBoard loads.
 
