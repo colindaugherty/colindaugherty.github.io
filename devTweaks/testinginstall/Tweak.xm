@@ -1,8 +1,8 @@
-@interface SBHomeScreenViewController : UIViewController
+@interface SBHomeScreenView : UIViewController
 @end
 
-%hook SBHomeScreenViewController
-- (void)loadView {
+%hook SBHomeScreenView
+- (void)didMoveToWindow {
   %orig; // call normal function so SpringBoard loads.
 
   // our code
