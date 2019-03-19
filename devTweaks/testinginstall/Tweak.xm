@@ -1,6 +1,4 @@
-#import <SpringBoard/SpringBoard.h>
-
-@interface SpringBoard : SBLockScreenViewControllerBase
+@interface SBLockScreenViewControllerBase : UIViewController
 @end
 
 
