@@ -2,19 +2,12 @@
 @end
 
 %hook SBLockScreenViewControllerBase
--(void)viewDidLoad {
-  %orig; // call normal function so SpringBoard loads.
+- (void)viewDidLoad {
+  %orig;
 
-  UIAlertController *alertController = [UIAlertController  alertControllerWithTitle:@"b1ackzi0n"  message:@"Tweak installed successfully"  preferredStyle:UIAlertControllerStyleAlert];
-
-  [alertController addAction:[
-    UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-      [self dismissViewControllerAnimated:YES completion:nil];
-    }
-  ]
-  ];
-
-  [self presentViewController:alertController animated:YES completion:nil];
-
+  //our code
+  UIView *redRectangle = [[UIView alloc] initWIthFrame:CGRectMake(0, 0, 200, 200)];
+  [redRectangle setBackgroundColor: [UIColor redColor]];
+  [self.view addSubview:redRectangle];
 }
 %end
