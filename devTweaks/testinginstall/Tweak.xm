@@ -8,7 +8,7 @@
   // our code
   UIAlertController *alertController = [UIAlertController  alertControllerWithTitle:@"b1ackzi0n"  message:@"Tweak installed successfully"  preferredStyle:UIAlertControllerStyleAlert];
 
-  [alertController addAction:[UIAlertAction title:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+  [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
     [self dismissViewControllerAnimated:YES completion:nil];
   }]];
 
