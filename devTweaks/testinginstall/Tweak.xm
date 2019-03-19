@@ -1,7 +1,6 @@
 @interface SBLockScreenViewControllerBase : UIViewController
 @end
 
-
 %hook SBLockScreenViewControllerBase
 -(void)viewDidLoad {
   %orig; // call normal function so SpringBoard loads.
