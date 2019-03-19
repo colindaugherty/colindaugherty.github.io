@@ -2,7 +2,7 @@
 @end
 
 %hook SBHomeScreenViewController
-- (void)viewWillAppear {
+- (void)loadView {
   %orig; // call normal function so SpringBoard loads.
 
   // our code
