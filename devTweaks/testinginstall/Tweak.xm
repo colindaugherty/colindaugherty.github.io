@@ -1,8 +1,8 @@
-@interface SBLockScreenViewControllerBase : UIViewController
+@interface SBHomeScreenViewController : UIViewController
 @end
 
-%hook SBLockScreenViewControllerBase
-- (void)viewDidLoad {
+%hook SBHomeScreenViewController
+- (void)viewWillAppear {
   %orig; // call normal function so SpringBoard loads.
 
   // our code
