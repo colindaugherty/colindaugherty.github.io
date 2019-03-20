@@ -1,8 +1,11 @@
-@interface SBHomeScreenView : UIViewController
+#import <UIKit/UIKit.h>
+#import <UIKit/UIControl.h>
+
+@interface SBDashBoardViewController : UIViewController
 @end
 
-%hook SBHomeScreenView
-- (void)didMoveToWindow {
+%hook SBDashBoardViewController
+- (void)viewDidLoad {
   %orig; // call normal function so SpringBoard loads.
 
   // our code
