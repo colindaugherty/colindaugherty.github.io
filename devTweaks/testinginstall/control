@@ -1,7 +1,7 @@
 Package: net.colindaugherty.testinginstall
 Name: TestingInstall
 Depends: mobilesubstrate
-Version: 0.1.4
+Version: 0.1.5
 Architecture: iphoneos-arm
 Description: a tweak that shows an alert
 Maintainer: Colin Daugherty <support@colindaugherty.net>
