@@ -1,21 +1,17 @@
-#import <UIKit/UIKit.h>
-#import <UIKit/UIControl.h>
-
-@interface SBDashBoardViewController : UIViewController
+@interface SBHomeScreenViewController : UIView
 @end
 
-%hook SBDashBoardViewController
+%hook SBHomeScreenViewController
+
 - (void)viewDidLoad {
-  %orig; // call normal function so SpringBoard loads.
+    %orig;
 
-  // our code
-  UIAlertController *alertController = [UIAlertController  alertControllerWithTitle:@"b1ackzi0n"  message:@"Tweak installed successfully"  preferredStyle:UIAlertControllerStyleAlert];
-
-  [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-    [self dismissViewControllerAnimated:YES completion:nil];
-  }]];
-
-  [self.view.window.rootViewController presentViewController:alertController animated:YES completion:nil];
-
+    UIAlertView *alertTestInstall = [[UIAlertView alloc]
+        initWithTitle:@"TestingInstall"
+        message:@"Tweak installed successfully!\nv0.1.7"
+        delegate:self
+        cancelButtonTitle:@"Thanks b1z0!"
+        otherButtonTitles:nil];
+    [alertTestInstall show];
 }
 %end
